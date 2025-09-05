@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorio 01 - Integrantes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f4f4f4;
+      color: #2c2c2c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInBody 0.8s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #3a3a3a;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, #6c63ff, #48c9b0);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    h1:hover {
+      color: #1f1f1f;
+    }
+
+    h1:hover::after {
+      transform: scaleX(1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    li {
+      background-color: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #2d3436;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      animation: fadeInItem 0.6s ease forwards;
+      opacity: 0;
+      position: relative;
+      cursor: pointer;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: #6c63ff;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      background-color: #f9f9ff;
+    }
+
+    li:hover::before {
+      background-color: #48c9b0;
+    }
+
+    li:hover strong {
+      color: #6c63ff;
+      letter-spacing: 0.5px;
+      transform: translateX(2px);
+    }
+
+    strong {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+    }
+
+    li:nth-child(1) { animation-delay: 0.2s; }
+    li:nth-child(2) { animation-delay: 0.4s; }
+    li:nth-child(3) { animation-delay: 0.6s; }
+    li:nth-child(4) { animation-delay: 0.8s; }
+    li:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes fadeInItem {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Integrantes</h1>
+  <ul>
+    <li><strong>GARCIA ALAYO JACK DAVID</strong></li>
+    <li><strong>PEÑA SERRANO JEFFERSON MIGUEL</strong></li>
+    <li><strong>ROBLES PEREZ MARTIN ARYAN</strong></li>
+    <li><strong>ROJAS REYES JONATHAN ORLANDO</strong></li>
+    <li><strong>ROSAS PEREZ LUIGGI ANTHONY</strong></li>
+  </ul>
+</body>
+</html>
